@@ -26,18 +26,8 @@ code {
   margin: auto;
   margin-top: 100px;
   padding: 20px;
-  /* border-radius: 10px; */
   border-top: 5px solid #17b102;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
-}
-
-.login-container {
-  /* background-color: red; */
-  padding: 0 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 16rem;
 }
 
 input {
@@ -79,19 +69,20 @@ a {
   text-decoration: none;
 }
 
-.divider span {
-  background: #fff;
-  padding: 0 10px;
+.icon {
+  position: relative;
+  font-size: 0.8rem;
+  top: 2.5px;
+  right: 3px;
 }
 
-.divider {
-  margin-top: 1.5rem !important;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid #656565;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
+.uppercase {
   text-transform: uppercase;
-  font-size: 0.6rem;
-  font-weight: 700;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
