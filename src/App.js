@@ -1,7 +1,8 @@
-import Login from './components/Login';
-
+// import Login from './components/Login';
+import StepOne from './components/Forms/StepOne';
+// import StepTwo from './components/Forms/StepTwo';
 function App() {
-  return <Login />;
+  return <StepOne />;
 }
 
 export default App;
