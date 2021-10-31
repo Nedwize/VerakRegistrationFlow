@@ -103,7 +103,7 @@ function StepOne() {
           </td>
         </tr>
       </table>
-      <div style={{ justifyContent: 'end' }} className="flex-container">
+      <div className="flex-container just-flex-end bottom-div">
         <button className="nxt-btn">CONTINUE</button>
       </div>
     </div>

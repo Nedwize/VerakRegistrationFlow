@@ -149,3 +149,28 @@ hr {
   max-width: 120px;
   max-height: 1.5rem;
 }
+
+.heading {
+  font-weight: 500;
+  color: #494949;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+#membership-details {
+  margin: 0.2rem 0 1.2rem 0;
+  max-width: 340px;
+  color: #989698;
+  font-weight: 500;
+}
+
+#payment-msg {
+  color: #989698;
+  font-weight: 500;
+  max-width: 350px;
+  margin: 0 0 0 1rem;
+}
+
+#payment-head {
+  margin: 1rem 0 1.5rem 0;
+}

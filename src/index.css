@@ -64,7 +64,7 @@ button {
   width: 100%;
   cursor: pointer;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0.8rem 0;
 }
 
@@ -100,4 +100,20 @@ a {
 .back {
   font-weight: 500;
   color: #46a42a;
+}
+
+.bigger {
+  font-size: 1.4rem !important;
+}
+
+.bottom-div {
+  padding-bottom: 1.5rem !important;
+}
+
+.flex-start {
+  align-items: flex-start !important;
+}
+
+.just-flex-end {
+  justify-content: end !important;
 }
