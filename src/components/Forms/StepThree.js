@@ -1,11 +1,17 @@
 import './style.css';
 
-function StepThree() {
+function StepThree({ values, handleChange, nextStep, prevStep }) {
+  const confirm = () => {
+    console.log(values);
+  };
+
   return (
     <div className="container step-container">
       <div className="flex-container">
         <p className="step">Step 3 of 3</p>
-        <p className="back">Back to Step 2</p>
+        <p className="back" onClick={prevStep}>
+          Back to Step 2
+        </p>
       </div>
       <p className="nav-heading">Set up your payment and you are done!</p>
       <div className="flex-container flex-start">
@@ -29,7 +35,9 @@ function StepThree() {
       </div>
       <input type="text" placeholder="Card" />
       <div className="flex-container bottom-div">
-        <button className="nxt-btn">START MEMBERSHIP</button>
+        <button className="nxt-btn" onClick={confirm}>
+          START MEMBERSHIP
+        </button>
         <p id="payment-msg">
           <em>
             WIP Msg - You might be prompted to your bank's website to complete

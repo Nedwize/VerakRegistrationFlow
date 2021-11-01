@@ -15,12 +15,14 @@ function Plan({ type, price, details }) {
   );
 }
 
-function StepOne() {
+function StepOne({ values, handleChange, nextStep, prevStep }) {
   return (
     <div className="container step-container">
       <div className="flex-container">
         <p className="step">Step 1 of 3</p>
-        <p className="back">Back to Login</p>
+        <p className="back" onClick={prevStep}>
+          Back to Login
+        </p>
       </div>
       <p className="nav-heading">Choose a plan that's right for you</p>
       <table>
@@ -104,7 +106,9 @@ function StepOne() {
         </tr>
       </table>
       <div className="flex-container just-flex-end bottom-div">
-        <button className="nxt-btn">CONTINUE</button>
+        <button className="nxt-btn" onClick={nextStep}>
+          CONTINUE
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import './style.css';
 
-function Login() {
+function Login({ values, nextStep, handleChange }) {
   return (
     <div className="container">
       <div className="login-container">
@@ -12,8 +12,14 @@ function Login() {
         <p>
           <strong>Software has never been so simple.</strong>
         </p>
-        <input type="email" placeholder="Email address"></input>
-        <button>CONTINUE</button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          value={values.email}
+          onChange={handleChange}
+        ></input>
+        <button onClick={nextStep}>CONTINUE</button>
         <p className="divider">
           <span>or login with</span>
         </p>
