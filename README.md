@@ -1,8 +1,8 @@
-# KeyNote
+# Appivo
 
-Appivo is an application registration flow. It contains pages for Pricing Plans, Personal Details and a Payments Page. Appivo is built with ReactJS as a multi-step form.
-
-These are some snapshots of the overall look of the app.
+Appivo is an application registration flow. It contains pages for Pricing Plans, Personal Details and a Payments Page. Appivo is built with ReactJS as a multi-step form. 
+These are some snapshots of the overall look of the app. OR 
+View the app here - [Demo](https://verak-nakshatra.netlify.app/)
 
 ### Login Page
 ![Login-Appivo](https://raw.githubusercontent.com/NakshatraCodes/VerakRegistrationFlow/master/view/login.png)
