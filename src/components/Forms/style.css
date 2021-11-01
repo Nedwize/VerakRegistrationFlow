@@ -4,7 +4,7 @@ p {
 
 .step-container {
   min-width: 400px;
-  padding: 0px 30px;
+  padding: 0 2rem 1rem;
 }
 
 table {
@@ -185,4 +185,26 @@ hr {
   height: 2rem;
   font-size: 1rem;
   margin: 1rem 0 1rem 0;
+}
+
+#expiry-input {
+  height: 2rem;
+  font-size: 1rem;
+  margin: 1rem 0 1rem 1rem;
+  max-width: 4rem;
+}
+
+#cvv-input {
+  height: 2rem;
+  font-size: 1rem;
+  margin: 1rem 0 1rem 1rem;
+  max-width: 4rem;
+}
+
+#visa-icon {
+  position: relative;
+  font-size: 2rem;
+  top: 2.5px;
+  right: 5px;
+  color: #1a1f71;
 }

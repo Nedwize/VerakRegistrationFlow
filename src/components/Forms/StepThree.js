@@ -1,4 +1,6 @@
 import './style.css';
+import Cleave from 'cleave.js/react';
+import { FaCcVisa } from 'react-icons/fa';
 
 function StepThree({ values, handleChange, nextStep, prevStep }) {
   const confirm = () => {
@@ -54,7 +56,38 @@ function StepThree({ values, handleChange, nextStep, prevStep }) {
         <p className="heading">PAYMENT METHOD - CREDIT CARD</p>
         <p className="heading">SECURE FORM</p>
       </div>
-      <input type="text" id="card-input" placeholder="Card" />
+      <div className="flex-container">
+        <div id="visa-icon">
+          <FaCcVisa />
+        </div>
+        <Cleave
+          placeholder="Enter Credit Card Number"
+          id="card-input"
+          options={{
+            creditCard: true,
+          }}
+          name="cardNumber"
+          onChange={handleChange}
+          value={values.cardNumber}
+        />
+        <Cleave
+          placeholder="Expiry"
+          id="expiry-input"
+          options={{ date: true, datePattern: ['m', 'y'] }}
+          onChange={handleChange}
+          value={values.cardExpiry}
+          name="cardExpiry"
+        />
+        <input
+          type="text"
+          placeholder="CVV"
+          id="cvv-input"
+          maxLength="3"
+          onChange={handleChange}
+          value={values.cardCVV}
+          name="cardCVV"
+        />
+      </div>
       <div className="flex-container bottom-div">
         <button className="nxt-btn" onClick={confirm}>
           START MEMBERSHIP
