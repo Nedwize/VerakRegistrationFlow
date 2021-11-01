@@ -8,7 +8,7 @@ import StepThree from './StepThree';
 function UserForm() {
   const [step, setStep] = useState(0);
   const [values, handleChange] = useForm({
-    planType: 'enterprise',
+    planType: '',
     organization: '',
     firstName: '',
     lastName: '',

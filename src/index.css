@@ -8,12 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7f5fa;
   color: #444444;
-  font-size: 8px;
+  font-size: 16px;
 }
 
 p {
   margin: 1.2em;
-  font-size: 1.3em;
+  font-size: 1.1rem;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -27,8 +27,8 @@ code {
   width: fit-content;
   height: fit-content;
   margin: auto;
-  margin-top: 100px;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 40px;
   border-top: 5px solid #17b102;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
 }
@@ -47,25 +47,32 @@ input[type]:not([type='checkbox']) {
   display: inline-block;
 }
 
-input[type='email']:focus {
-  box-shadow: 0 0 2px #17b102;
+input[type]:not([type='checkbox']):not([type='radio']):focus {
+  box-shadow: 0 0 4px #17b102;
   border: 1px solid #17b102;
 }
 
 button {
   font-family: 'Ubuntu', sans-serif;
   color: white;
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 3px;
-  height: 28px;
+  height: 3rem;
   background-color: #17b102;
   width: 100%;
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
   margin: 0.8rem 0;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #83c56e;
+  color: #f3f3f3;
+  cursor: default;
 }
 
 a {
@@ -76,9 +83,9 @@ a {
 
 .icon {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 1rem;
   top: 2.5px;
-  right: 3px;
+  right: 5px;
 }
 
 .uppercase {
@@ -104,7 +111,7 @@ a {
 }
 
 .bigger {
-  font-size: 1.4rem !important;
+  font-size: 2.5rem !important;
 }
 
 .bottom-div {

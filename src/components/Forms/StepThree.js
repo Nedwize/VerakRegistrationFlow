@@ -5,6 +5,21 @@ function StepThree({ values, handleChange, nextStep, prevStep }) {
     console.log(values);
   };
 
+  const getPrice = () => {
+    if (values.planType === 'team') return '49.9';
+    if (values.planType === 'enterprise') return '0';
+    else return '9.9';
+  };
+
+  const getDetails = () => {
+    if (values.planType === 'team')
+      return 'The plan for teams that are building several apps or even apps for different customers.';
+    if (values.planType === 'enterprise')
+      return 'A plan for big teams and/or enterprises looking to build a large number of apps or apps with large volumes of users.';
+    else
+      return 'A plan for individual developers or those just curious to try.';
+  };
+
   return (
     <div className="container step-container">
       <div className="flex-container">
@@ -18,14 +33,20 @@ function StepThree({ values, handleChange, nextStep, prevStep }) {
         <div>
           <p className="heading">YOUR MEMBERSHIP</p>
           <p id="membership-details">
-            Team plan - The plan for teams that are building several apps or
-            even apps for different customers. <br /> $49.9 per month with
-            monthly plan
+            <span style={{ textTransform: 'capitalize' }}>
+              {values.planType}
+            </span>{' '}
+            plan - {getDetails()} <br />
+            {'$'}
+            {getPrice()} per month with monthly plan
           </p>
         </div>
         <div>
           <p className="heading">TOTAL DUE</p>
-          <p className="heading bigger">$49.9</p>
+          <p className="heading bigger">
+            {'$'}
+            {getPrice()}
+          </p>
         </div>
       </div>
       <hr />
@@ -33,7 +54,7 @@ function StepThree({ values, handleChange, nextStep, prevStep }) {
         <p className="heading">PAYMENT METHOD - CREDIT CARD</p>
         <p className="heading">SECURE FORM</p>
       </div>
-      <input type="text" placeholder="Card" />
+      <input type="text" id="card-input" placeholder="Card" />
       <div className="flex-container bottom-div">
         <button className="nxt-btn" onClick={confirm}>
           START MEMBERSHIP

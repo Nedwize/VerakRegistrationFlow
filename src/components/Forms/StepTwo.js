@@ -1,6 +1,25 @@
+import { useState } from 'react';
 import './style.css';
 
 function StepTwo({ values, handleChange, nextStep, prevStep }) {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const isValid = () => {
+    return (
+      !values.organization ||
+      !values.firstName ||
+      !values.lastName ||
+      !values.email ||
+      !values.phone ||
+      !values.country ||
+      !isChecked
+    );
+  };
+
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <div className="container step-container">
       <div className="flex-container">
@@ -83,7 +102,12 @@ function StepTwo({ values, handleChange, nextStep, prevStep }) {
       </div>
       <div className="flex-container">
         <div className="tacbox">
-          <input id="checkbox" type="checkbox" />
+          <input
+            id="checkbox"
+            type="checkbox"
+            checked={isChecked}
+            onChange={handleOnChange}
+          />
           <label htmlFor="checkbox">
             <strong>
               {' '}
@@ -94,7 +118,7 @@ function StepTwo({ values, handleChange, nextStep, prevStep }) {
             </strong>
           </label>
         </div>
-        <button className="nxt-btn" onClick={nextStep}>
+        <button className="nxt-btn" onClick={nextStep} disabled={isValid()}>
           CONTINUE
         </button>
       </div>

@@ -9,17 +9,18 @@ function Login({ values, nextStep, handleChange }) {
         <p id="logo">
           app<span>ivo</span>
         </p>
-        <p>
-          <strong>Software has never been so simple.</strong>
-        </p>
+        <p>Software has never been so simple.</p>
         <input
           type="email"
           name="email"
+          id="login-input"
           placeholder="Email address"
           value={values.email}
           onChange={handleChange}
         ></input>
-        <button onClick={nextStep}>CONTINUE</button>
+        <button onClick={nextStep} id="login-btn" disabled={!values.email}>
+          CONTINUE
+        </button>
         <p className="divider">
           <span>or login with</span>
         </p>
