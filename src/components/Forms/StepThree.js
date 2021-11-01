@@ -3,8 +3,33 @@ import Cleave from 'cleave.js/react';
 import { FaCcVisa } from 'react-icons/fa';
 
 function StepThree({ values, handleChange, nextStep, prevStep }) {
-  const confirm = () => {
+  // The function below can be used to handle the process after form submission
+  // An example API call is commented to provide the gist of the process
+  // Data is logged to the console for simplicity
+  const handleFormSubmit = () => {
     console.log(values);
+    // setLoader(true);
+    // postAPI(values)
+    //   .then((res) => {
+    //     if (res.data.data) {
+    //       showToast('Registration Successful');
+    //       setLoader(false);
+    //     } else {
+    //       showToast(`Couldn't process request`);
+    //       setLoader(false);
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     if (err) {
+    //       showToast(`Couldn't process request`);
+    //       setLoader(false);
+    //     }
+    //   });
+    // };
+  };
+
+  const isValid = () => {
+    return !values.cardCVV || !values.cardExpiry || !values.cardNumber;
   };
 
   const getPrice = () => {
@@ -89,7 +114,11 @@ function StepThree({ values, handleChange, nextStep, prevStep }) {
         />
       </div>
       <div className="flex-container bottom-div">
-        <button className="nxt-btn" onClick={confirm}>
+        <button
+          className="nxt-btn"
+          onClick={handleFormSubmit}
+          disabled={isValid()}
+        >
           START MEMBERSHIP
         </button>
         <p id="payment-msg">

@@ -105,6 +105,13 @@ th:nth-child(n + 2) {
   color: #aaadb1;
 }
 
+#email-error {
+  font-size: 0.9rem;
+  margin: 0.2rem 0 0 0;
+  max-width: 13rem;
+  color: red;
+}
+
 .form p {
   margin-bottom: 0.3rem;
   font-weight: 500;

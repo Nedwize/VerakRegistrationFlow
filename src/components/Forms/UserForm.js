@@ -18,7 +18,6 @@ function UserForm() {
     cardNumber: '',
     cardExpiry: '',
     cardCVV: '',
-    cardPIN: '',
   });
 
   // Proceed to next step

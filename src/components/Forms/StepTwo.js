@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './style.css';
+import { AiFillWarning } from 'react-icons/ai';
+import validator from 'validator';
 
 function StepTwo({ values, handleChange, nextStep, prevStep }) {
   const [isChecked, setIsChecked] = useState(false);
@@ -12,7 +14,8 @@ function StepTwo({ values, handleChange, nextStep, prevStep }) {
       !values.email ||
       !values.phone ||
       !values.country ||
-      !isChecked
+      !isChecked ||
+      !validator.isEmail(values.email)
     );
   };
 
@@ -75,6 +78,14 @@ function StepTwo({ values, handleChange, nextStep, prevStep }) {
               onChange={handleChange}
               placeholder="Email"
             />
+            <p id="email-error">
+              {!validator.isEmail(values.email) && (
+                <>
+                  <AiFillWarning />
+                  Not a valid email address
+                </>
+              )}
+            </p>
           </div>
           <div>
             <p>
